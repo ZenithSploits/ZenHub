@@ -1,0 +1,13 @@
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/ZenithSploits/ZenHub/main/uilib.lua'))()
+
+local w = library:CreateWindow("test")
+
+w:CreateButton("Kill Self", function()
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0 
+end)
+w:CreateSlider("WalkSpeed", 16, 100, function(arg)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = arg
+end)
+w:CreateToggle("Check console after click", function(state)
+    print(state)
+end)
