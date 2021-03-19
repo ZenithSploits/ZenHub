@@ -6,7 +6,9 @@ w:CreateButton("Kill Self", function()
     game.Players.LocalPlayer.Character.Humanoid.Health = 0 
 end)
 w:CreateSlider("WalkSpeed", 16, 100, function(arg)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = arg
+    while true do
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = arg
+    end
 end)
 w:CreateToggle("Check console after click", function(state)
     print(state)
